@@ -1,5 +1,7 @@
 package users.classes;
 
+import CourseHandler.Course;
+import CourseHandler.CourseHandler;
 import users.enums.UserType;
 
 public class Teacher extends User {
@@ -15,5 +17,17 @@ public class Teacher extends User {
     @Override
     public String printUserInfo() {
         return String.format("%s, %s", name, faculty);
+    }
+
+    public void addStudentToCourse(int courseID, String student) {
+        StudentHandler.addStudentToCourse(courseID, student);
+    }
+
+    public void removeStudentFromCourse(int courseID, String student) {
+        CourseHandler.deleteAtendant(courseID, student);
+    }
+
+    public void gradeStudentOnCourse(int courseID, String student, double grade) {
+        CourseHandler.gradeStudent(courseID, student, grade);
     }
 }
