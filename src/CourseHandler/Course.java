@@ -31,6 +31,10 @@ public class Course {
         this.headTeacher = headTeacher;
     }
 
+    public String getHeadTeacher() {
+        return headTeacher;
+    }
+
     public void displayCourseInfo() {
         System.out.printf("Course name: %s%n", name);
         System.out.printf("Head teacher: %s%n", headTeacher);

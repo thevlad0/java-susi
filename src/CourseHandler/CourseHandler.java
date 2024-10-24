@@ -29,4 +29,8 @@ public class CourseHandler {
         DataHandler.getCoursesList().get(courseId).removeAtendant(username);
     }
 
+    public static void gradeStudent(int courseId, String username, double grade) {
+        DataHandler.writeData(username, new CourseGrade(courseId, grade));
+    }
+
 }
